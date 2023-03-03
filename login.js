@@ -43,7 +43,7 @@ let indiceusuario = cuentas.findIndex((elemento, indice) => {
 
 let balance = parseInt(cuentas[localStorage.indiceusuario].saldo);
 //let cantidad =parseInt(document.getElementById('Cant').value);
-let cantidad = 50
+
 
 
  
@@ -54,8 +54,26 @@ let cantidad = 50
     alert('tu saldo es' + ' ' + balance)
   }
 
+  function retiro() {
+    let cantidad = parseInt(document.getElementById('Cant').value);
+    if (cantidad > balance) {
+      alert("Fondos insuficientes");
+    } else {
+      balance -= cantidad;
+      alert(`Retiro de ${cantidad} exitoso, su nuevo saldo es: ${balance}`);
+    }
+  }
+  
+  // Function deposito
+  function deposito() {
+    let cantidad = parseInt(document.getElementById('Cant').value);
+    balance += cantidad;
+    alert(`Deposito de  ${cantidad} exitoso. Su nuevo saldo es: ${balance}`);
+  }
 
-  function retiro(cantidad) {
+
+/*   function retiro(cantidad) {
+    
        if (cantidad > balance) {
       alert("Fondos insuficientes");
     } else {
@@ -69,7 +87,7 @@ let cantidad = 50
     balance += cantidad;
     alert(`Deposito de  ${cantidad} exitoso. Su nuevo saldo es: ${balance}`);
   }
-  
+   */
   
 
 
