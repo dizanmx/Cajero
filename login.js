@@ -41,9 +41,11 @@ let indiceusuario = cuentas.findIndex((elemento, indice) => {
   }
 }); //obtengo el indice para en la sig variable llamar a cuentas por el indice que necesito del arreglo y el elemento.saldo
 
-let balance = cuentas[localStorage.indiceusuario].saldo;
+let balance = parseInt(cuentas[localStorage.indiceusuario].saldo);
 //let cantidad =parseInt(document.getElementById('Cant').value);
-let cantidad = "150"
+let cantidad = 50
+
+
  
   
   // Function retiro
